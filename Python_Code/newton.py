@@ -17,13 +17,13 @@ def RE_(x1, x0):
 
 # the original function
 def f(x):
-    # return 10*x**3 - 2*x**2 + 3*x - 1   # function whose root we're approximating
-    return x + np.e**(2.499*x)
+    return 9*x**3 - 14*x**2 - 12*x + 7   # function whose root we're approximating
+    # return x + np.e**(2.499*x)
     
 # the iteration function, g(x) = x - f(x) / f'(x)
 def g(x):
-    # return x - ( f(x) / (30*x**2 - 4*x + 3) )  # the iteration function, g(x) = x - f(x) / f'(x)
-    return x - ( f(x) / (1 + 2.499*np.e**(2.499*x)) )
+    return x - ( f(x) / (27*x**2 - 28*x - 12) )  # the iteration function, g(x) = x - f(x) / f'(x)
+    # return x - ( f(x) / (1 + 2.499*np.e**(2.499*x)) )
 
 
 # main function
@@ -40,5 +40,5 @@ def fixed_point(p0, epsilon):
     print('Approximation of the fixed point is', rnd(p, 7)[-1])
 
 
-fixed_point(-1, 1e-6)
+fixed_point(0.375, 1e-7)
 

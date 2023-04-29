@@ -1,8 +1,8 @@
 from rounding import rounding as rnd
-# import numpy as np
+import numpy as np
 
 def f(x):
-    return 2*x**3 - 9*x**2 + 2*x + 10
+    return x*np.sin(0.86*x) - 0.43
 
 def RE_(x1, x0):
     return abs((x1 - x0)/x1)
@@ -20,7 +20,7 @@ def secant(x0, x1, epsilon):
     n = 1
     while RE >= epsilon:
         x2 = x1 - f(x1) * (x1 - x0) / (f(x1) - f(x0))
-        RE = RE_(x2, x1)
+        RE = RE_(round(rnd(x2, 7)[-1], 10), round(rnd(x1, 7)[-1], 10))
         printing(n, x0, x1, x2, RE)
         x0 = x1
         x1 = x2
@@ -28,4 +28,4 @@ def secant(x0, x1, epsilon):
 
     print('Approximation of the root is', round(rnd(x2, 7)[-1], 10))
 
-secant( 3, 4, 1e-7)
+secant( 1, 0.8, 1e-6)

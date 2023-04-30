@@ -63,6 +63,6 @@ def fixed_point(x0, criterion):
     return rnd(x1,9)[-1], f"steps={interations+1}, y*={rnd(y_, 9)[-1]}, RE={RE1}, SD={sd(RE1)[2]}"
 
 
-print(fixed_point(0.5226, 1e-7))
+print(fixed_point(0.5071, 1e-7))
 
 

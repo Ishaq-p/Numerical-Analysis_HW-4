@@ -5,7 +5,7 @@ from rounding import rounding as rnd        # rounding.py is in the same folder,
 # defining the function
 def f_(x):
     # return (3.64 * x * (1 - x**2 + x)*np.log(x)) - x**2 +1
-    return 9*x**3 - 14*x**2 - 12*x + 7
+    return 14*x**3 - 12*x**2 + 11*x - 4
 
 # defining the p_(a,b) , the midpoint of a and b
 def p_(a,b):

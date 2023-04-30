@@ -2,7 +2,7 @@ from rounding import rounding as rnd
 import numpy as np
 
 def f(x):
-    return x*np.sin(0.42*x) - 0.21
+    return x*np.sin(0.34*x) - 0.17
 
 def RE_(x1, x0):
     return abs((x1 - x0)/x1)

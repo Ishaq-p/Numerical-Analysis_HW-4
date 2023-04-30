@@ -17,13 +17,13 @@ def RE_(x1, x0):
 
 # the original function
 def f(x):
-    return 9*x**3 - 14*x**2 - 12*x + 7   # function whose root we're approximating
-    # return x + np.e**(2.499*x)
+    return 14*x**3 - 12*x**2 + 11*x - 4   # function whose root we're approximating
+    # return x + np.e**(1.134*x)
     
 # the iteration function, g(x) = x - f(x) / f'(x)
 def g(x):
-    return x - ( f(x) / (27*x**2 - 28*x - 12) )  # the iteration function, g(x) = x - f(x) / f'(x)
-    # return x - ( f(x) / (1 + 2.499*np.e**(2.499*x)) )
+    return x - ( f(x) / (42*x**2 - 24*x + 11) )  # the iteration function, g(x) = x - f(x) / f'(x)
+    # return x - ( f(x) / (1 + 1.134*np.e**(1.134*x)) )
 
 
 # main function
